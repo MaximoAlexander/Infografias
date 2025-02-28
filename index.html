@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/global.css">
+    <link rel="stylesheet" href="./CSS/componets.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Añadir Google Font -->
+    <title>Infografia 2</title>
+</head>
+
+<body>
+
+    <header class="grid-3col">
+        <div class="images">
+            <img src="./SRC/IPN.jpg" alt="Left Image" class="left-image">
+        </div>
+        <p>
+            Instituto Politécnico Nacional. Cecyt 3 “Estanislao Ramírez Ruiz “. <br>
+            Programa académico: Filosofía II. Unidad de Aprendizaje: Filosofía II. Unidad Temática: Segunda. RDD. Forma
+            parte de una serie de 6 iinfografias<br>
+            Titulo del RDD: El pensamiento ¿Cómo Juzga?<br>
+            Tema: Juicios y cuadro de oposición de los juicios<br>
+            Competencia General:<br>
+            Demuestra la validez de los razonamientos por medio de los principales métodos dedcutivos, para la
+            construcción del conocimiento en términos formales, distinguiendo argumentos correctos e incorrectos, en la
+            solución de problemas manifestados en los ámbitos escolar, familiar y profesional<br>
+            Competencia especifica:Traduce argumentos del lenguaje ordinario al lenguaje simbólico para su validación
+        </p>
+
+        <div class="images">
+            <img src="./SRC/CECyT_3.jpg" alt="Right Image" class="left-image">
+        </div>
+    </header>
+
+    <div class="grid-3col">
+        <div class="container">
+            <div class="typewriter">
+                Un poligono es la unión de segmentos de recta y es: (V)
+                Este juicio es verdad con base a a la Revista National Geographic España (2024).
+            </div>
+            <img class="img-generic" src="./SRC/E1.jpg">
+        </div>
+        <div class="container">
+            <img class="gif" src="./SRC/mago.gif">
+        </div>
+        <div class="container">
+            <div class="typewriter">
+                Un polígono no es la unión de segmentos de recta y es: (F)
+                Este juicio es falso con base a a la Revista National Geographic España (2024).
+            </div>
+            <img class="img-generic" src="./SRC/E1.jpg">
+        </div>
+    </div>
+
+    <div class="grid-2col custom-grid">
+        <div class="container">
+            <img class="img-generic" src="./SRC/image.png">
+        </div>
+        <div class="container">
+            <button id="showTextButton">Mostrar Texto</button>
+            <div id="newTypewriter" class="typewriter" style="display: none;">
+
+                Cuantificadores para los juicios universales afirmativos son: Todo, toda, todos, todas.
+                Para los juicios universales negativos son: Ningún, ninguno, ninguna.
+                Para los juicios particulares afirmativos son: algún, algunos, algunas.
+                Para los juicios particulares negativos son: algún…no, algunos…no, algunas… no.
+
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-2col">
+        <div class="container">
+            <img class="gif" style="width: 10%; margin: auto -10px;" src="./SRC/bara.gif">
+        </div>
+        <div class="container">
+            <div class="typewriter" style="text-align: center;">
+                En el cuadro de oposición, podrás ubicar cuatro tipos de letra de acuerdo a cada tipo de juicio para poder
+                oponerlos entre cada extremo es decir, la relación opuesta que hay entre ellos.
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <ol>
+            <li> Las contrarias se identifican cuando ambos juicios son universales y sólo difieren en su cualidad.
+                <span class="text-random-color"> A/E </span>
+            <li> Las subcontrarias cuando los juicios se explican como particulares y difieren por la cualidad. <span
+                    class="text-random-color"> I/O </span>
+            <li> Las contradictorias cuando los juicios difieren en calidad y cantidad. <span class="text-random-color">
+                    A/O, E/I </span>
+            <li> Las subalternas se expresan cuando ambos juicios tienen la misma cualidad, pero difieren en cantidad.
+                <span class="text-random-color"> A/I , E/O </span>
+        </ol>
+    </div>
+
+    <div class="container">
+        <h2>EJEMPLOS:</h2>
+        <ul>
+            <ol> <span class="text-random-color">Toda</span> magia es ilusión: Se ubica en la letra <span
+                    class="text-random-color">A</span> porque expresa el cuantificador <span
+                    class="text-random-color">Todo</span></ol>
+            <ol> <span class="text-random-color">Algunos</span> magos son habilies se ubica en la letra <span
+                    class="text-random-color">I</span> porque expresa <span class="text-random-color">algunos</span>
+            </ol>
+            <ol> <span class="text-random-color">Ningun</span> mago es astuto se ubica en la letra <span
+                    class="text-random-color">E</span> porque expresa <span class="text-random-color">ningun</ol>
+            <ol> <span class="text-random-color">Algunos</span> magos no son inteligentes se ubica en la letra <span
+                    class="text-random-color">O</span> porque expresa <span class="text-random-color">algunos</span>
+            </ol>
+        </ul>
+    </div>
+
+    <div class="container">
+        <table>
+            <tr>
+                <td rowspan="2">Juicio</td>
+                <td colspan="5">Respuestas</td>
+                <td rowspan="2" class="hidden" id="columna3">Justificación</td>
+            </tr>
+            <tr>
+                <td> Toda magia es ilusión </td>
+                <td onclick="showJustification('CORRECTA A porque es universal afirmativo', true)">A</td>
+                <td onclick="showJustification('Incorrecta E, porque es universal negativa', false)" >E</td>
+                <td onclick="showJustification('Incorrecta I porque es particular afirmativa', false)">I</td>
+                <td onclick="showJustification('Incorrecta O porque es particular negativa', false)">O</td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+
+    <script>
+        function showJustification(justification, isCorrect) {
+            var col3 = document.getElementById('columna3');
+            col3.innerHTML = justification;
+            col3.classList.remove('hidden');
+    
+            // Cambiar el color de la respuesta seleccionada
+            var cells = document.querySelectorAll('td[onclick]');
+            cells.forEach(cell => cell.style.backgroundColor = '');
+    
+            if (isCorrect) {
+                event.target.style.backgroundColor = 'green';
+                // Lanzar confeti
+                confetti({
+                    particleCount: 100,
+                    spread: 70,
+                    origin: { y: 0.6 }
+                });
+                // Reproducir sonido correcto
+                var correctSound = new Audio('./SRC/correct.mp3');
+                correctSound.play();
+            } else {
+                event.target.style.backgroundColor = 'red';
+                // Reproducir sonido incorrecto
+                var incorrectSound = new Audio('./SRC/incorrect.mp3');
+                incorrectSound.play();
+            }
+        }
+    </script>
+
+
+
+    <footer>
+        <div class="footer-top">
+            REFERENCIAS
+            <ul></ul>(s.f.). *Pensamiento y lenguaje*. Universidad Nacional Autónoma de México.
+            https://proyectos.cuaed.unam.mx/uapa/derecho/pensamiento-lenguaje/
+            <ul></ul>Enciclopedia Iberoamericana. (s.f.). *Nexos*. https://enciclopediaiberoamericana.com/nexos/
+            <ul></ul>Gutiérrez Sáenz, R. (2018). Introducción a la
+            lógica.https://es.scribd.com/doc/161553389/Introduccion-A-La-Logica-Raul-Gutierrez-Saenz
+            <ul></ul>Rodríguez, M. (2023). *Carl Friedrich Gauss, el príncipe de las matemáticas*. *National Geographic
+            España*. https://www.nationalgeographic.com.es/ciencia/carl-friedrich-gauss_21953
+            <ul></ul>Torres, M. (2009). *La práctica docente y la evaluación: Retos y propuestas*. *Revista de Educación
+            y Pedagogía*, 21(2), 9-24. http://ve.scielo.org/scielo.php?script=sci_arttext&pid=S0459-12832009000200009
+            <ul></ul>Universidad Nacional Autónoma de México. (s.f.). Oraciones subordinadas: Repasar.
+            http://objetos.unam.mx/literatura/oracionesSubordinadasRepasar/pdf/ayuda.pdf
+        </div>
+        <div class="footer-bottom">
+            Elaboró: MEBC. ERIKA RENDÓN MORALES.<br>
+            FEBRERO 2025
+        </div>
+    </footer>
+
+    <script src="./JS/narrator.js"></script>
+    <script src="./JS/actions.js"></script>
+    <script src="./JS/componets.js"></script>
+    <script src="./JS/background.js"></script>
+</body>
+
+</html>
